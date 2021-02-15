@@ -1,0 +1,11 @@
+theme: jekyll-theme-slate
+
+show_downloads: false
+github:
+    is_project_page: false
+
+collections:
+    projects:
+        permalink: /project/:title
+        output: true
+        sort_by: name

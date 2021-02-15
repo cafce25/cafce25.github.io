@@ -1,0 +1,47 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+nav {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        li {
+            float: left;
+
+            a {
+                color: #ffffff;
+                display: block;
+                padding: 4px 16px;
+                margin: 0 2px;
+                text-align: center;
+                text-decoration: none;
+                background: #444444;
+            }
+            a:hover {
+                background: #000;
+                color: #ffffff;
+                text-decoration: none;
+            }
+            %current-page-link {
+                background: #fff;
+                color: #000;
+                text-decoration: none;
+            }
+            a.this-page {
+                @extend %current-page-link;
+            }
+            a.this-page:hover {
+                @extend %current-page-link;
+            }
+        }
+    }
+}
+
+div#main_content_wrap {
+    border-top: 0;
+}
