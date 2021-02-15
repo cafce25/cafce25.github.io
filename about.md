@@ -6,6 +6,9 @@ permalink: /about
 
 I'm a programming language enthusiast and polyglot.
 
+Sometimes I stream on [twitch](https://twitch.tv/cafce25), when I do it's
+usually me coding or playing [factorio](https://www.factorio.com).
+
 I've dipped my feet in a lot of programming languages, among them:
 - [Haskell](https://www.haskell.org)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
