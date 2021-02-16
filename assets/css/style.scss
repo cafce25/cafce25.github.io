@@ -3,6 +3,13 @@
 
 @import "{{ site.theme }}";
 
+$cafce-red: #782121;
+$cafce-blue: #009dff;
+
+a {
+    color: $cafce-red;
+}
+
 nav {
     ul {
         list-style-type: none;
