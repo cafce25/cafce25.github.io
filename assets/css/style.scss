@@ -11,6 +11,13 @@ a {
 }
 
 nav {
+    a, a:hover{
+        color: #fff;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+    }
+
     ul {
         list-style-type: none;
         margin: 0;
@@ -23,16 +30,6 @@ nav {
             background: #444444;
             padding: 4px 16px;
             margin: 0 2px;
-            a {
-                color: #fff;
-                display: block;
-                text-align: center;
-                text-decoration: none;
-            }
-            a:hover {
-                color: #ffffff;
-                text-decoration: none;
-            }
 
             ul {
                 background: $cafce-red;
@@ -42,6 +39,9 @@ nav {
                 width: 100%;
                 z-index: 1;
                 li {
+                    a {
+                        color: #fff;
+                    }
                     background: $cafce-red;
                 }
             }
@@ -52,7 +52,7 @@ nav {
         .this-page, .this-page:hover {
             background: #fff;
             text-decoration: none;
-            a {
+            > a {
                 color: #000;
             }
         }
