@@ -24,9 +24,22 @@
           <ul>
           {% for nav_page in site.data.pages %}
             {% if nav_page.url == page.url %}
-            <li><a class="this-page">{{ nav_page.name }}</a></li>
+            <li class="this-page"><a>{{ nav_page.name }}</a></li>
             {% else %}
-            <li><a href="{{nav_page.url}}">{{nav_page.name}}</a></li>
+            <li
+              {% if nav_page.pages %}
+              class="has-sub"
+              {% endif %}
+            >
+              <a href="{{nav_page.url}}">{{nav_page.name}}</a>
+              {% if nav_page.pages %}
+                <ul>
+                  {% for subpage in nav_page.pages %}
+                    <li><a href="{{subpage.url}}">{{subpage.name}}</a></li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
             {% endif %}
           {% endfor %}
           </ul>

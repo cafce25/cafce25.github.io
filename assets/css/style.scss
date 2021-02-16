@@ -18,32 +18,48 @@ nav {
         overflow: hidden;
 
         li {
+            display: block;
             float: left;
-
+            background: #444444;
+            padding: 4px 16px;
+            margin: 0 2px;
             a {
-                color: #ffffff;
+                color: #fff;
                 display: block;
-                padding: 4px 16px;
-                margin: 0 2px;
                 text-align: center;
                 text-decoration: none;
-                background: #444444;
             }
             a:hover {
-                background: #000;
                 color: #ffffff;
                 text-decoration: none;
             }
-            %current-page-link {
-                background: #fff;
+
+            ul {
+                background: $cafce-red;
+                display: none;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                z-index: 1;
+                li {
+                    background: $cafce-red;
+                }
+            }
+        }
+        li.has-sub > a::after {
+            content: ' \25bc';
+        }
+        .this-page, .this-page:hover {
+            background: #fff;
+            text-decoration: none;
+            a {
                 color: #000;
-                text-decoration: none;
             }
-            a.this-page {
-                @extend %current-page-link;
-            }
-            a.this-page:hover {
-                @extend %current-page-link;
+        }
+        li:hover {
+            background: $cafce-red;
+            ul {
+                display: block;
             }
         }
     }
