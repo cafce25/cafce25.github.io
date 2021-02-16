@@ -5,7 +5,7 @@ permalink: /projects
 # Projects
 {% for proj in site.projects %}
 {% if proj.title != "Index" %}
-[{{ proj.title }}]({{ proj.url }})
+[{{ proj.name }}]({{ proj.url }})
 {% endif %}
 {% endfor %}
 

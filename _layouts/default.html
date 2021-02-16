@@ -26,25 +26,21 @@
             {% if nav_page.url == page.url %}
             <li class="this-page {% if nav_page.pages %} has-sub {% endif %}">
               <a>{{ nav_page.name }}</a>
-              {% if nav_page.pages %}
+              {% if nav_page.name == "Projects" %}
                 <ul>
-                  {% for subpage in nav_page.pages %}
-                    <li><a href="{{subpage.url}}">{{subpage.name}}</a></li>
+                  {% for project in site.projects %}
+                    <li><a href="{{project.url}}">{{project.name}}</a></li>
                   {% endfor %}
                 </ul>
               {% endif %}
             </li>
             {% else %}
-            <li
-              {% if nav_page.pages %}
-              class="has-sub"
-              {% endif %}
-            >
+            <li class="{% if nav_page.pages %}has-sub{% endif %}">
               <a href="{{nav_page.url}}">{{nav_page.name}}</a>
-              {% if nav_page.pages %}
+              {% if nav_page.name == "Projects" %}
                 <ul>
-                  {% for subpage in nav_page.pages %}
-                    <li><a href="{{subpage.url}}">{{subpage.name}}</a></li>
+                  {% for project in site.projects %}
+                    <li><a href="{{project.url}}">{{project.name}}</a></li>
                   {% endfor %}
                 </ul>
               {% endif %}

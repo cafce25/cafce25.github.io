@@ -6,6 +6,3 @@
   url: "/tools"
 - name: "Projects"
   url: "/projects"
-  pages:
-      - name: "BitBurner"
-        url: "/project/bitburner"

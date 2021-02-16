@@ -3,6 +3,9 @@ theme: jekyll-theme-slate
 show_downloads: false
 github:
     is_project_page: false
+    project_title: cafce25.github.io
+    project_tagline: 'Happy hacking!'
+
 
 collections:
     projects:
