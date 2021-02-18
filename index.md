@@ -1,3 +1,3 @@
 ---
 ---
-This page contains just some specs of information about me.
+This page contains just some specks of information about me.
